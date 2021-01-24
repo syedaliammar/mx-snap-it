@@ -1,0 +1,31 @@
+{
+  "name": "snapit",
+  "widgetName": "SnapIt",
+  "version": "1.0.0",
+  "description": "This widget exports an HTML element to an image",
+  "copyright": "",
+  "author": "Ammar Rizvi",
+  "config": {
+    "widgetPath": "../..//widgets",
+    "projectPath": "../..//",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "mendix",
+  "scripts": {
+    "start": "concurrently \"pluggable-widgets-tools start:server --open\" \"npm:dev\"",
+    "dev": "pluggable-widgets-tools start:js",
+    "build": "pluggable-widgets-tools build:js",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:js"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^8.9.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
+}

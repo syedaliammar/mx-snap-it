@@ -1,0 +1,13 @@
+{
+  "@mendix/generator-widget": {
+    "promptValues": {
+      "organization": "Mendix",
+      "copyright": "",
+      "license": "Apache-2.0",
+      "author": "Ammar Rizvi",
+      "programmingLanguage": "javascript",
+      "platform": "web",
+      "boilerplate": "empty"
+    }
+  }
+}
