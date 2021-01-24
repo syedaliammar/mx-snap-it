@@ -8,9 +8,13 @@
     <icon/>
     <properties>
         <propertyGroup caption="General">
-            <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
+            <property key="classNameToExport" type="string" required="true">
+                <caption>Class to export</caption>
+                <description>Unique class name of page element to export as image</description>
+            </property>
+            <property key="exportFilename" type="string" required="true">
+                <caption>File name</caption>
+                <description>Default export file name for all images</description>
             </property>
         </propertyGroup>
     </properties>
