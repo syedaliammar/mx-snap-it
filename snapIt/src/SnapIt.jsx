@@ -5,13 +5,11 @@ import { toPng, toJpeg, toSvg } from "html-to-image";
 import { saveAs } from "file-saver";
 
 const SnapIt = props => {
-    const { classNameToExport, exportFileName } = props;
-
-    const _exportToSVG = elementToExport => {
+    const _exportToSVG = props => {
         htmlToImage
-            .toSvg(elementToExport)
+            .toSvg(document.getElementsByClassName(props.classNameToExport)[0])
             .then(function(dataUrl) {
-                saveAs(dataUrl, exportFileName + ".svg");
+                saveAs(dataUrl, props.exportFilename + ".svg");
             })
             .catch(function(error) {
                 console.error("Something went wrong while generating the SVG", error);
@@ -20,11 +18,7 @@ const SnapIt = props => {
 
     return (
         <div id="modebar">
-            <button
-                id="export_org_svg"
-                title="Download chart as SVG"
-                onClick={() => _exportToSVG(document.getElementsByClassName("mx-name-" + classNameToExport)[0])}
-            >
+            <button id="export_svg" title="Download chart as SVG" onClick={() => _exportToSVG(props)}>
                 SVG
             </button>
         </div>
