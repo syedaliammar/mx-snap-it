@@ -13,8 +13,22 @@
                 <description>Unique class name of page element to export as image</description>
             </property>
             <property key="exportFilename" type="string" required="true">
-                <caption>File name</caption>
-                <description>Default export file name for all images</description>
+                <caption>Export Filename</caption>
+                <description>Default filename for all images exported from the widget</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Export Menu">
+            <property key="allowPNG" type="boolean" defaultValue="true">
+                <caption>Export PNG</caption>
+                <description></description>
+            </property>
+            <property key="allowJPEG" type="boolean" defaultValue="true">
+                <caption>Export JPEG</caption>
+                <description></description>
+            </property>
+            <property key="allowSVG" type="boolean" defaultValue="true">
+                <caption>Export SVG</caption>
+                <description></description>
             </property>
         </propertyGroup>
     </properties>
